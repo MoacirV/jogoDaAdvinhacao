@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --cor0: #174faa;
+    --cor1: #f8dabd;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(45deg, #07285f, #1f67db, #4a77bf, #24395a);
+    background-size: 400% 400%; /* Tamanho do gradiente para permitir o movimento */
+    animation: degrademov 10s ease-in-out infinite;
+}
+
+@keyframes degrademov {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    width: 630px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px 0 rgba(0, 0, 0, 0.75);
+}
+
+.container h1 {
+    font-size: 25px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px 25px;
+    border-bottom: 1px solid #ccc;
+}
+
+.container .conteudo {
+    margin: 25px 25px 35px;
+}
+
+.container .inputs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.inputs input {
+    height: 57px;
+    width: 56px;
+    margin: 4px;
+    font-size: 24px;
+    color: black;
+    font-weight: bold;
+    background-color: var(--cor1);
+    border-radius: 5px;
+    border: 1px solid var(--cor0);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.inputs input:first-child {
+    margin-left: 0px;
+}
+
+.conteudo .details {
+    margin: 20px 0 25px;
+}
+
+.details p {
+    font-size: 19px;
+    margin-bottom: 10px;
+}
+
+.conteudo .resetar-btn {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: var(--cor0);
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.conteudo .input-digitacao {
+    z-index: -999;
+    position: absolute;
+    opacity: 0;
+}
+
